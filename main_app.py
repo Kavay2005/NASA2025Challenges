@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import matplotlib as plt
 from datetime import date, time, timedelta
 import requests
 import folium
@@ -201,4 +201,5 @@ with tab4:
             suggestion = f"✅ The model is **{100-prediction_proba*100:.0f}% confident it will NOT rain**. Conditions look favorable for your {st.session_state.event_type}."
             st.success(risk_level); st.info(suggestion)
     else:
+
         st.error("The model (`daily_rain_classifier.pkl`) or forecast data is unavailable. Please check inputs on the 'Event Input' tab.")
