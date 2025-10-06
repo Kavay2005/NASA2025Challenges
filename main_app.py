@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from datetime import date, time, timedelta
 import requests
 import folium
@@ -203,3 +203,4 @@ with tab4:
     else:
 
         st.error("The model (`daily_rain_classifier.pkl`) or forecast data is unavailable. Please check inputs on the 'Event Input' tab.")
+
